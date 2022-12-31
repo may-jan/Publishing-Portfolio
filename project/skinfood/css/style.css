@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+*{margin:0px; padding:0px;} 
+body{width:100%; height:100%;}
+ul, li{list-style:none;}
+a{display:block;}
+
+/*----메인 비디오----*/
+#mainvideo{width:100%; height:100%; position:fixed; left:0px; top:0px;}
+#mainvideo video{width:100%;}
+
+
+/*----기울기 왼쪽----*/
+#skew1{width:550px; height:100%; background:#FDDA3A; position:fixed; top:0px; left:-340px; transform:skewX(-35deg);}
+
+
+/*----기울기 오른쪽----*/
+#skew2{width:600px; height:100%; background:#C2D294; position:fixed; top:0px; right:-600px; transform:skewX(-35deg); transition:all .5s;}
+#skew2:hover{right:-340px;}
+
+#skew3{width:280px; height:100%; background:white; position:fixed; top:0px; right:-300px; transition:all .5s; opacity:.3;}
+#skew2:hover #skew3{left:20px;}
+
+#skew2 #con{position:fixed; top:400px; left:60px; width:225px; height:100%;}
+#skew2 #con p{width:200px; height:120px; margin-bottom:22px; opacity:0; font-size:22px; line-height:22px; font-family: 'Oswald', sans-serif; font-family: 'Teko', sans-serif;  transform:skewX(35deg); transition:all .5s; position:relative; left:40px;}
+#skew2:hover #con p{opacity:1;}
+#skew2 #con p a img{width:200px; height:100px; position:relative; left:-50px; transform:skewX(-35deg); transition:all .5s;}    
+#skew2 #con p a img:hover{transform:scale(1.12) skewX(-35deg);}
+
+#skew2 #arrow i{color:black; position:fixed; left:35px; bottom:18px; font-size:42px; transform:skewX(35deg); transition:all .7s;}
+#skew2:hover #arrow i{opacity:0;}
+
+#skew2 #logo{width:145px; height:50px; position:fixed; left:100px; bottom:15px; transform:skewX(35deg);}
+#skew2 #logo img{transition-duration:.5s; z-index:3;}
+#skew2:hover #logo img{transform:translateX(290px);}
+
+
+/*----메뉴----*/
+#nav{width:170px; height:100%; transform:skewX(-35deg); position:fixed; top:0px; left:40px; font-family: 'Oswald', sans-serif; font-family: 'Teko', sans-serif;}
+#nav a{text-decoration:none; width:auto; height:50px;}
+
+#nav>ul{width:170px; height:800px; position:relative; top:190px;}
+#nav>ul>li{width:170px; height:45px; line-height:45px; position:relative; margin-bottom:20px;}
+#nav>ul>li:hover>a{font-size:32px; font-weight:bold; color:#F28A3C;}
+#nav>ul>li>a{color:white; font-size:30px; width:170px; height:45px; line-height:45px; text-align:right; padding-right:25px; box-sizing:border-box; transform:skewX(35deg); transition:all .2s;}
+
+.smenu{width:0px; height:auto; position:absolute; top:5px; left:170px; overflow:hidden; transition:all .3s;}
+#nav ul li:hover>.smenu{width:200px;}
+.smenu li{width:180px; height:50px; line-height:50px; background:rgba(255,255,255,0.9); z-index:1;}
+.smenu>li>a{color:#79451E; font-size:23px; width:200px; height:50px; line-height:50px; padding-left:25px; transform:skewX(35deg);}
+.smenu>li:hover>a{color:#F28A3C;}
+
+
+/*----어썸폰트----*/
+#icon{position:fixed; top:15px; right:20px;}
+#icon li{float:left; margin-right:20px;}
+#icon li a{color:white; font-size:25px; transition:all .3s;}
+#icon li:hover a{transform:scale(1.3); color:#FDDA3A;} 
+
+
+/*----텍스트----*/
+#textbox{position:fixed; top:10px; left:35px;}
+#textbox .text{color:white; font-size:65px; font-family: 'Abril Fatface', cursive;}
+.text a{text-decoration:none; color:inherit;}

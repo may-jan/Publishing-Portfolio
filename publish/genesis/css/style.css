@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+#wrap{width:100%; background:url("../images/bg.jpg")left/cover; position:relative;  background-attachment:fixed;}
+#wrap::before{content:""; display:block; padding-top:100%;}
+a{display:block;}
+body{overflow-x:hidden;}
+
+/*메인화면*/
+.toplogo::before{content:""; display:block; padding-top:30%;}
+.toplogo{width:13%; background:url("../images/logo.png")no-repeat; position:absolute; top:30px; left:2%;}
+
+.title::before{content:""; display:block; padding-top:10%;}
+.title{width:40%; position:absolute; top:1%; left:28%; color:#fff; font-size:10vw; text-align:center; font-family: 'Cardo', serif;}
+.title p{font-size:1.1vw; padding-top:10%; line-height:40px; font-family:"";}
+
+
+/*마우스 scroll*/
+.mouse{width:30px; height:45px; border-radius:20px; border:4px solid white; z-index:99; position:fixed; left:50%; bottom:10%;}
+.mouse::before{content:""; width:10px; height:10px; display:block; border-radius:50px; background:white; position:absolute; left:33%; top:10%;
+animation-name:scroll;
+animation-duration:1s;
+animation-iteration-count:infinite;}
+
+@keyframes scroll{
+	0%{}
+	100%{top:50%; opacity:0;}
+}
+
+.mouse::after{content:"scroll"; color:white; width:50px; height:20px; display:block; position:absolute; left:-30%; top:120%; text-align:center;}
+
+
+/*네비*/
+ul{width:100%; height:5%; position:fixed; bottom:0; left:0; z-index:9999;  font-family: 'Cardo', serif;}
+ul li{float:left; width:20%; height:100%; position:relative;  top:0; left:0; background:black;}
+ul li a{width:100%; height:100%; display:block; text-align:center; font-weight:bold; text-decoration:none; color:#fff; font-size:1.3vw; position:relative; padding-top:7px; box-sizing:border-box;}
+ul li a:hover{color:#777;}
+
+
+/*car1*/
+.section1::before{content:""; display:block; padding-top:60%;}
+.section1{width:100%; position:relative; top:20%; background-color:rgba(0,0,0,0.6); margin-top:20%;}
+
+.car1_box::before{content:""; display:block; padding-top:40%; border-top:4px solid rgba(255,255,255,0.6); border-bottom:4px solid rgba(255,255,255,0.6); box-sizing:border-box; position:relative;}
+.car1_box{width:100%; background:rgba(0,0,0,0.6); position:absolute; top:15%;}
+
+.car1::before{content:""; display:block; padding-top:50%;}
+.car1{width:60%; background:url("../images/car1.png")center/cover; position:absolute; right:5%; top:24%; z-index:999;}
+
+.car1_txt::before{content:""; display:block; padding-top:25%;}
+.car1_txt{width:30%; position:absolute; top:15%; left:5%; z-index:999; color:#fff; font-size:0.9vw;}
+.car1_txt p{font-size:5vw; display:block; transition:all .5s;  font-family: 'Cardo', serif;}
+.car1_txt span{transition:all .5s;}
+
+/*car2*/
+.section2::before{content:""; display:block; padding-top:40%;}
+.section2{width:100%; position:relative; background-color:rgba(0,0,0,0.6); margin-top:60%; 
+border-top:4px solid rgba(255,255,255,0.6); border-bottom:4px solid rgba(255,255,255,0.6);}
+
+.car2::before{content:""; display:block; padding-top:50%;}
+.car2{width:60%; background:url("../images/car2.png")center/cover; position:absolute; right:3%; top:13%; z-index:999;}
+
+.car2_txt::before{content:""; display:block; padding-top:17%;}
+.car2_txt{width:30%; position:absolute; top:5%; left:5%; z-index:999; color:#fff; font-size:0.9vw;}
+.car2_txt p{font-size:5vw; display:block;  font-family: 'Cardo', serif;}
+.car2_txt span{transition:all .5s;}
+
+
+/*car3*/
+.section3::before{content:""; display:block; padding-top:30%;}
+.section3{width:100%; position:relative; background-color:rgba(0,0,0,0.6); margin-top:80%; padding-bottom:15%;
+border-top:4px solid rgba(255,255,255,0.6); border-bottom:4px solid rgba(255,255,255,0.6);}
+
+.car3::before{content:""; display:block; padding-top:50%;}
+.car3{width:60%; background:url("../images/car3.png")center/cover; position:absolute; right:3%; top:18%;}
+
+.car3_txt::before{content:""; display:block; padding-top:13%;}
+.car3_txt{width:30%; position:absolute; top:5%; left:5%; z-index:999; color:#fff; font-size:0.9vw; }
+.car3_txt p{font-size:5vw;  font-family: 'Cardo', serif;}
+.car3_txt span{transition:all .5s;}
+
+
+
+/*미디어쿼리*/
+@media all and (min-width:500px) and (max-width:1025px) {
+	#wrap{background:url("../images/bg.jpg")left center; background-size:200% 100%; width:100%; background-attachment:fixed; position:relative;}
+	.toplogo{width:30%; background:url("../images/logo.png")no-repeat; position:absolute; top:20px; left:2%;}
+  
+	.mouse{display:none;}
+
+	.title{width:50%; position:absolute; left:25%; top:5%;}
+	.title::before{content:"";display:block; padding-top:20%;}
+	.text{width:50%; background:url("../images/bg_text.png") cover; position:absolute; left:25%; top:5%;}
+
+	.car1::before{content:""; display:block; padding-top:100%;}
+	.car1{width:50%; background:url("../images/car1.png")no-repeat left/cover; background-size:100%; position:absolute; right:3%; top:10%;}
+    .car1_txt{width:40%;}
+
+	.car2::before{content:""; display:block; padding-top:65%;}
+	.car2{width:50%; background:url("../images/car2.png")no-repeat left/cover; background-size:100%; position:absolute; right:3%; top:10%;}
+    .car2_txt{width:40%;}
+
+	.car3::before{content:""; display:block; padding-top:60%;}
+	.car3{width:50%; background:url("../images/car3.png")no-repeat left/cover; background-size:100%; position:absolute; right:3%; top:10%;}
+    .car3_txt{width:40%;}
+}
+
+@media all and (max-width:500px) {
+	#wrap{background:url("../images/bg.jpg")left center; background-size:100% 100%;}
+	.toplogo{width:31%; background:url("../images/logo.png")no-repeat; position:absolute; top:20px; left:2%;}
+    
+	.title{width:80%; background:url("../images/bg_title.png")center/cover; position:absolute; top:5%; left:10%;}
+	.title::before{content:""; display:block; padding-top:30%;}
+    
+    .car1_txt span, .car2_txt span, .car3_txt span{opacity:0;}
+    .car1_txt p{position:absolute; left:30%; top:80%; font-size:30px;}
+    .car2_txt p{position:absolute; left:30%; top:72%; font-size:30px;}
+    .car3_txt p{position:absolute; left:7%; top:90%; font-size:30px;}
+    ul{height:3.5%;}
+    .car3{top:18%;}
+
+}

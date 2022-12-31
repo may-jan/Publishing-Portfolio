@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+}
+
+/* -------------------------------- 
+모바일버전
+-------------------------------- */
+#project {
+  width: 500px;
+  height: 1000px;
+  position: relative;
+  margin: 0 auto;
+}
+.cd-slider-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 85%;
+  height: 700px;
+  margin: auto;
+}
+
+.cd-slider-wrapper a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cd-slider {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+}
+.cd-slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.6s;
+}
+.cd-slider li.is-visible {
+  transform: translateX(0);
+}
+.cd-slider .cd-half-block {
+  height: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.cd-slider li:nth-of-type(1) .image {
+  background-image: url(../images/pro1.png);
+}
+.cd-slider li:nth-of-type(2) .image {
+  background-image: url(../images/pro2.png);
+}
+.cd-slider li:nth-of-type(3) .image {
+  background-image: url(../images/pro3.png);
+}
+.cd-slider li:nth-of-type(4) .image {
+  background-image: url(../images/pro4.png);
+}
+.cd-slider li:nth-of-type(5) .image {
+  background-image: url(../images/pro5.png);
+}
+.cd-slider li:nth-of-type(6) .image {
+  background-image: url(../images/pro6.png);
+}
+.cd-slider li:nth-of-type(7) .image {
+  background-image: url(../images/pro7.png);
+}
+.cd-slider li:nth-of-type(8) .image {
+  background-image: url(../images/pro8.png);
+}
+.cd-slider li:nth-of-type(9) .image {
+  background-image: url(../images/pro9.png);
+}
+.cd-slider .image {
+  background-size: cover;
+}
+
+.cd-slider li:nth-of-type(1) .content {
+  background-color: #fff;
+}
+.cd-slider li:nth-of-type(2) .content {
+  background-color: #fff;
+}
+.cd-slider li:nth-of-type(3) .content {
+  background-color: #fff;
+}
+.cd-slider li:nth-of-type(4) .content {
+  background-color: #fff;
+}
+.cd-slider li:nth-of-type(6) .content {
+  background-color: #fff;
+}
+.cd-slider li:nth-of-type(7) .content {
+  background-color: #fff;
+}
+.cd-slider li:nth-of-type(8) .content {
+  background-color: #fff;
+}
+.cd-slider li:nth-of-type(9) .content {
+  background-color: #fff;
+}
+
+.cd-slider .content {
+  padding: 50px 30px 30px 30px;
+  color: #777;
+  background-color: #fff;
+}
+
+/*텍스트*/
+.cd-slider h2 {
+  color: #dd545b;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.cd-slider p {
+  color: #444;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+/*view 버튼*/
+.cd-slider .btn {
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 20px;
+  background: #eccdc4;
+  color: #dd545b;
+  transition: all 0.2s;
+  font-weight: bold;
+  font-size: 13px;
+}
+.cd-slider .btn:hover {
+  background: #dd545b;
+  color: #fff;
+}
+
+/* Slider Navigation */
+.cd-slider-navigation {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  bottom: 30px;
+}
+.cd-slider-navigation li {
+  display: inline-block;
+  margin: 0;
+  box-sizing: border-box;
+}
+.cd-slider-navigation li.selected a {
+  background-color: #888;
+}
+.cd-slider-navigation a {
+  display: block;
+  height: 15px;
+  width: 15px;
+  margin: 0px 4px;
+  border-radius: 50%;
+  color: transparent;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+  border: 2px solid #888;
+}
+
+/* -------------------------------- 
+큰화면
+-------------------------------- */
+
+@media only screen and (min-width: 501px) {
+  #project {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    margin: 0 auto;
+  }
+  #project .m-inner-wrap {
+    width: 1500px;
+    height: 700px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .cd-slider-wrapper {
+    position: relative;
+    top: 0px;
+    width: 1500px;
+    height: 700px;
+    margin: 0 auto;
+  }
+
+  .cd-slider li {
+    pointer-events: none;
+    z-index: 1;
+    transform: translateX(0);
+    transition: z-index 0s 0.6s;
+  }
+  .cd-slider li.is-visible {
+    pointer-events: auto;
+    z-index: 3;
+    transition: z-index 0s 0s;
+  }
+  .cd-slider li.is-visible.covered {
+    z-index: 2;
+  }
+  .cd-slider .cd-half-block {
+    height: 100%;
+    width: 50%;
+    float: right;
+    text-align: right;
+  }
+  .cd-slider .cd-half-block.content {
+    transform: translateX(200%);
+    transition: transform 0.6s 0s ease-in-out;
+  }
+  .cd-slider .cd-half-block.image {
+    transform: translateX(100%);
+    transition: transform 0s 0.3s;
+  }
+  .cd-slider li.is-visible .cd-half-block.content,
+  .cd-slider li.is-visible .cd-half-block.image {
+    transform: translateX(0%);
+  }
+  .cd-slider li.is-visible .cd-half-block.content {
+    transition: transform 0.6s 0s ease-in-out;
+  }
+  .cd-slider .content {
+    display: table;
+    padding-right: 80px;
+  }
+  .cd-slider .content > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  /*텍스트*/
+  .cd-slider h2 {
+    font-size: 45px;
+    margin-bottom: 40px;
+    height: 70px;
+    line-height: 70px;
+  }
+  .cd-slider p {
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  /*view 버튼*/
+  .cd-slider .btn {
+    font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+    width: 110px;
+    height: 40px;
+  }
+  .cd-slider h2 {
+    font-size: 45px;
+    margin-bottom: 40px;
+    height: 70px;
+    line-height: 70px;
+  }
+  .cd-slider p {
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  /* Slider Navigation */
+  .cd-slider-navigation {
+    width: 406px;
+    padding: 5px;
+    margin: 0px;
+    position: absolute;
+    bottom: -70px;
+    transform: translateZ(2px) translateX(-50%);
+    transition: transform 0.3s;
+  }
+  .cd-slider-navigation.slider-animating {
+    transform: translateX(-50%) scale(1);
+  }
+  .cd-slider-navigation {
+    margin: 0 auto;
+    width: 406px;
+  }
+
+  .cd-slider-navigation li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #eccdc4;
+    text-align: center;
+    margin: 0px 2px;
+  }
+
+  .cd-slider-navigation a {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-indent: 0;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cd-slider-navigation li.selected a {
+    background-color: transparent;
+    color: #dd545b;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,57 @@
+.simply-scroll-container { /* Container DIV - automatically generated */
+	position: relative;
+    width:700px;
+    height:130px;
+    border:10px solid #FFB60E;
+    border-radius:30px;
+    margin:100px auto 100px auto;
+    padding:50px 0px;
+}
+
+.simply-scroll-clip { /* Clip DIV - automatically generated */
+    position: relative;
+    overflow: hidden;
+}
+
+.simply-scroll-list { /* UL/OL/DIV - the element that simplyScroll is inited on */
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+
+/* Custom class modifications - override classees
+.simply-scroll is default
+*/
+
+.simply-scroll { /* Customisable base class for style override DIV */
+	width: 700px;
+	height: 150px;
+}
+
+.simply-scroll .simply-scroll-clip {
+    width: 700px;
+    height: 130px;
+    padding:15px 0px;
+}
+
+.simply-scroll .simply-scroll-list li {
+    float: left;
+    width: 250px;
+    height: 130px;
+}
+
+
+
+/*텍스트 스타일 추가*/
+#scroller>li>a{text-decoration:none; color:black;  transition:all .3s;}
+
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+#scroller>li>a>span{display:block; width:130px; text-align:center; margin-top:15px; font-family:'Rubik', sans-serif; font-size:20px; font-weight:bold; color:#581d00;}
+#scroller>li:hover>a span{color:orangered;}
+
+/*이미지 위치*/
+#scroller>li>a{width:130px; height:130px; position:relative;}
+#scroller>li>a>img{width:70px; height:70px; position:relative; left:30px; transition:all .3s;}
+#scroller>li:hover>a>img{transform:scale(1.1); }
+

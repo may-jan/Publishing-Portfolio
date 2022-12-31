@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+ul,li{list-style:none;}
+a{display:block; text-decoration:none; color:inherit;}
+a:hover{text-decoration:none; color:inherit;}
+img{border:0; vertical-align:top;}
+body{margin:0 auto; overflow:hidden;}
+
+
+
+
+/*--- 탑버튼 ---*/
+#page_up_btn{width:53px; height:50px; position:fixed; right:0; bottom:0; z-index:999;}
+
+
+
+
+/*--- 맨 위 열기닫기 토글 ---*/
+#open{width:100%;}
+#open .pop{text-align:center; margin-top:-253px;}
+.pop_drop{background:#e2e2e2; width:100%; height:253px;}
+.pop_menu:hover{cursor:pointer;}
+
+
+
+
+/*--- 팝업창 ---*/
+#popup{position:fixed; width:402px; height:278px; z-index:999; display:block; top:0;}
+#popup .content{position:absolute; width:402px; height:278px; border:1px solid #222328;}
+#popup .close{position:absolute; bottom:3px; width:100px; height:20px; border:1px solid #000; left:300px; cursor:pointer;}
+
+
+
+
+/*--- 상단 ---*/
+#wrap{position:relative; top:0px; margin-top:20px;}
+#line{position:absolute; top:60px; width:100%; border-top:2px solid #30204d;}
+#top>a>img{position:relative; margin-top:26px;left:-170px; opacity:0;}
+
+#top_layout{width:1350px; height:150px; margin:0 auto;}
+#top{width:1350px; height:177px; background:url(../images/logo.jpg)no-repeat; float:left; position:relative; top:-25px; background-size:169px 177px;}
+#top_header{width:1450px; height:88px; position:relative; top:-200px;}
+#top_header h1{background:url(../images/slogan.png) no-repeat; width:330px; height:39px; float:left; margin:10px 0px 0px 180px;}
+
+/* 예약.채팅.로그인.오시는길 */
+#top_header #gnb{float:right; position:relative; left:-50px;}
+#top_header #gnb li{float:left; padding-top:5px; padding-left:10px;}
+#top_header #gnb li:last-child{margin-left:-20px;}
+
+/* 메뉴 */
+#top_menu{width:1178px; height:70px; position:relative; float:right; top:-188px;}
+#top_menu #top_nav{width:100%; height:100%; float:right; position:absolute; left:0;}
+#top_menu #top_nav li{height:100%; float:left; position:relative;}
+#top_menu #top_nav>li>a{color:#222328; float:left; font-size:16px; padding:22px 15px; font-weight:bold;}
+#top_menu #top_nav>li>a:hover{color:#7545a8;}
+#top_menu #top_nav li .drop{position:absolute; top:78px; left:-3px; display:none;}
+#top_menu #top_nav li:hover .drop{display:block; z-index:999;}
+#top_menu #top_nav li .drop p{position:absolute; left:170px;}
+#top_menu #top_nav li .drop ul{border-bottom:3px solid #2b174a;}
+#top_menu #top_nav li .drop ul li{width:170px; height:30px; padding:5px 0px; background:#f2f2f2; border-bottom:1px solid #ccc;}
+#top_menu #top_nav li .drop ul li img{width:5px; height:10px; margin:4px 15px 0px 0px;}
+.tit_sub a{font-size:0.75em; font-weight:bold; color:#666; padding:7px 0px; margin-left:20px;}
+.tit_sub a:hover{color:#333;}
+.drop>p>span.text1{position:absolute; top:30px; left:20px; color:#fff;}
+.drop>p>span.text2{position:absolute; top:50px; left:20px; color:#fff;}
+
+.nav_tit #left1{position:absolute; left:-60px;}
+.nav_tit #left2{position:absolute; left:-190px;}
+.nav_tit #left3{position:absolute; left:-290px;}
+
+
+
+
+/*--- 빠른 메뉴 고정 ---*/
+#container1{position:fixed; right:0px; top:130px; width:105px; height:440px;}
+#home{position:relative; right:-50px; top:0px; width:53px; height:97px;}
+#menu1{position:relative; width:105px; height:540px; right:0px; top:0px; opacity:0; overflow:hidden;}
+
+
+
+
+/*--- 메인 슬라이더 ---*/
+.container {width:1900px; height:628px; position:relative;  margin:0 auto;}
+.keyvisual {position:absolute; width: 1900px; margin:0 auto; height:554px; overflow: hidden;}
+.control_btn .prev {position: absolute; top: 0; left:0px; cursor: pointer; z-index:10;}
+.control_btn .next {position: absolute; top: 0; right:0px; cursor: pointer; z-index:10;}
+.keyvisual .control_btn button { background-color: transparent; outline: 0;}
+
+.keyvisual ul {width: 600%; height:554px; overflow:hidden;}
+.keyvisual li {float: left; width: 100%; overflow: hidden;}
+.keyvisual img {width:1920px; height:554px; overflow:hidden;}
+.key_control {position:absolute; bottom:0; left:0; right:0; width:1340px; margin:0 auto; box-sizing:border-box;}
+.key_control ul {width:1235px; height: 74px; text-align: center; background-color:#fff; position:relative; margin:0 auto;}
+.key_control li {display: inline-block;width:207px;height:68px;text-align: center;float:left;border:1px solid #000;line-height:68px; box-sizing:border-box;}
+
+.key_control a {display: block; width: 100%; height: 100%; }
+.key_control a:hover{text-decoration:none; color:#000;}
+
+.key_control li.active {width:200px; height:68px; border:3px solid #000; box-sizing:border-box;}
+
+
+
+
+/*--- main1 real story ---*/
+#main1{width:1350px; height:462px; position:relative;  margin:auto auto 83px auto;}
+#main1_title{width:1335px; height:120px; margin:0 auto;}
+#main1_banner{width:1335px; height:342px; overflow:hidden; margin:0 auto;}
+#main1_banner ul li{float:left; position:relative; z-index:10;}
+#main1_banner ul li .color{width:171px; height:0; text-align:center; background:#4b139b; position:absolute; bottom:0; left:0; z-index:20; transition:height 0.3s; opacity:0.6;}
+#main1_banner ul li:hover .color{height:171px;}
+#main1_banner ul li .color a{color:#fff; font-size:0.75em; margin-top:50px; font-weight:bold; line-height:20px;}
+#main1_banner ul li .color a:hover{color:#dfbfff;}
+
+
+
+
+/*--- main2 이달의 포커스 ---*/
+#main2{width:1335px; height:700px; margin:auto auto 40px; position:relative;}
+#main2 .board1_tit{width:443px; height:58px; float:left;}
+#main2 .board1_tit .img1{width:443px; height:40px; overflow:hidden;}
+.board1_img{width:438px; height:217px; overflow:hidden;}
+.board1_tit .more{position:relative; left:370px; top:-30px;}
+
+#star{float:left; width:450px; height:300px; position:relative; left:10px;}
+.starlist{position:relative; top:15px;}
+.starlist p{float:left; font-size:14px; height:25px; line-height:25px;}
+.starlist li p:nth-child(1){width:300px; margin-right:70px;}
+
+#notice{float:left; width:440px; height:450px; position:relative; left:10px;}
+.noticelist{position:relative; top:15px;}
+.noticelist li p{float:left; width:auto; font-size:14px; height:25px; line-height:25px;}
+.noticelist li p:nth-child(1){margin-right:145px;}
+
+#face{clear:both; width:440px; position:relative; float:left;}
+.facelist{position:relative; top:15px;}
+.facelist li p{float:left; font-size:14px; height:25px; line-height:25px; width:auto;}
+.facelist li p:nth-child(1){margin-right:60px; width:300px;}
+
+#online{float:left; width:440px; position:relative; left:10px;}
+.onlinelist{position:relative; top:15px;}
+.onlinelist p{float:left; font-size:14px; height:25px; line-height:25px; width:auto;}
+.onlinelist li p:nth-child(1){margin-right:45px; width:320px;}
+
+#real{float:left; width:440px; position:relative; left:20px;}
+.reallist{position:relative; top:15px;}
+.reallist p{float:left; font-size:14px; height:25px; line-height:25px; width:auto;}
+.reallist li p:nth-child(1){margin-right:45px; width:320px;}
+
+
+
+
+/*--- main3 이달의포커스,안티에이징,빠른상담 ---*/
+#main3{width:1350px; height:930px; margin:30px auto; position:relative;}
+#main3_banner{width:1335px; height:930px; margin:0 auto; position:relative;}
+
+#banner1 li{float:left; margin-bottom:20px;}
+#banner1 li:hover{opacity:0.8;}
+
+#banner2 li{float:left; margin-bottom:20px;}
+#banner2 .s1{width:275px; height:290px; overflow:hidden;}
+
+#banner3 li{float:left; margin-bottom:20px;}
+
+
+
+
+/*--- dr. hershe ---*/
+#dr{width:1343px; height:500px; margin:0 auto; position:relative;}
+.drwrap{width:1337px; height:367px; position:relative; overflow:hidden;}
+.z1{width:1337px; height:367px; margin:auto;}
+.z2{width:1337px; height:368px; margin:auto; z-index:2; position:absolute; left:0; top:367px;}
+
+
+
+
+/*--- 흘러가는 배너 ---*/
+#partner{width: 1300px; height: 55px; margin: 30px auto;}
+#partner .left1{float: left;}
+#partner .right1{float: right;}
+#partner li.partner{float: left; width: 290px; height: 60px; text-align: center;}
+#partner .area{margin-left: 10px; width: 1160px; height: 60px; overflow: hidden; float: left;}
+#partner .area ul{width: 2320px; height: 55px; position: relative; } 
+
+
+
+
+
+/*--- footer ---*/
+#footerwrap{width:100%; height:1000px; background:#1a1a1a; position:relative;}
+#footer{width:1337px; margin:0 auto; height:1000px; background:url("../images/foot.jpg")no-repeat; color:#979797;}
+
+#foot_information{width:90%; height:520px; margin:0 auto; position:relative;}
+.text1{text-align:center; font-size:14px; position:relative; top:250px;}
+
+.foot_icon{width:675px; margin:0 auto; position:relative; top:280px;}
+.foot_icon li{float:left;}
+
+#footer h2{color:#bd924d; width:250px; text-align:center; margin:0 auto;}
+.text2{font-size:14px; text-align:center; margin-top:25px;}
+.text2 a{display:inline-block; color:#fff;}
+
+
+#foot_sitemap{width:1200px; height:350px; margin:0 auto; position:relative; top:40px; color:#fff; font-size:14px;}
+#foot_sitemap ul{margin-top:10px;}
+
+.fl li{width:auto; list-style:square; margin-right:41px; color:#999; position:relative; left:12px;}
+.fl:nth-child(3){margin-right:15px;}
+.fl:last-child li{margin-right:0px;}
+#foot_sitemap a{color:#999; font-size:11px;}
+#foot_sitemap a:hover{color:#fff;}
+
+
+
+

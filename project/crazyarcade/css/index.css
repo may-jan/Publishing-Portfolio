@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/*--기본설정--*/
+*{margin:0; padding:0;}
+ul{list-style:none;}
+a{text-decoration:none; color:#555; font-family:"";}
+img{border:0;}
+
+
+/*--h1 로고--*/
+h1{position:fixed; top:35px; left:40px; z-index:10;}
+h1>a>img{width:280px;}
+
+/*--sns--*/
+.sns{position:fixed; top:40px; right:50px; z-index:14;}
+.sns li{float:left; margin-left:20px;}
+.sns li i{font-size:28px; color:white; opacity:.9; transition:all .4s; margin-right:10px;}
+.sns li i:hover{transform:scale(1.2); opacity:1; color:#0f1c3f;}
+
+
+/*--list--*/
+.list{position:fixed; top:35%; left:10px; margin-top:50px; z-index:13;}
+.list a{display:block; width:200px; height:70px; font-size:27px; color:white; text-align:right; overflow:hidden; box-sizing:border-box; padding-top:7px; border-top:1px dotted #c6d5ff; transition:all .4s; font-family: 'Do Hyeon', sans-serif;}
+.list li:hover a{font-size:32px;}
+.list li.on a{font-size:36px; height:100px; letter-spacing:2.5px;}  /*임의클래스*/
+
+.list li:nth-child(1):hover a{color:#0f1c3f;}
+.list li:nth-child(2):hover a{color:#ff1200;}
+.list li:nth-child(3):hover a{color:#0e6ba0;}
+.list li:nth-child(4):hover a{color:#f2bd2a;}
+.list li:nth-child(5):hover a{color:#44c214;}
+.list li:nth-child(6):hover a{color:#c12147;}
+
+.list li:nth-child(1).on a{color:#fff; font-weight:bold;}
+.list li:nth-child(2).on a{color:#0f1c3f;}
+.list li:nth-child(3).on a{color:#0f1c3f;}
+.list li:nth-child(4).on a{color:#0f1c3f;}
+.list li:nth-child(5).on a{color:#0f1c3f;}
+.list li:nth-child(6).on a{color:#0f1c3f;}
+
+
+/*--#wrap section--*/
+section{width:100%; height:700px; position:relative; background-size:cover; background-position:right center; background-attachment:fixed; overflow:hidden;}
+
+
+section:nth-child(1){background:url("../images/bg1.png")center/cover;}
+section:nth-child(2){background:url("../images/bg4.png")center/cover;}
+section:nth-child(3){background:url("../images/bg2.png")center/cover;}
+section:nth-child(4){background:url("../images/bg5.png")center/cover;}
+section:nth-child(5){background:url("../images/bg3.png")center/cover;}
+section:nth-child(6){background:url("../images/bg6.png")center/cover;}
+
+article{position:absolute; top:5%; left:300px; z-index:11;}
+
+article p{font-size:80px; letter-spacing:3px; line-height:1px; font-family: 'Black Han Sans', sans-serif; text-shadow:3px 3px 1px #444; color:#fff;}
+article span{font-size:25px; display:inline-block; width:550px; font-family: 'Do Hyeon', sans-serif; text-shadow:2px 2px 2px #444; margin-top:40px; margin-left:20px; letter-spacing:1px;  color:#fff;}
+
+section:nth-child(2) p{margin-top:550px; margin-left:350px;}
+section:nth-child(3) p{margin-top:550px; margin-left:950px;}
+section:nth-child(4) p{margin-top:260px; margin-left:300px;}
+section:nth-child(5) p{margin-top:600px; margin-left:900px}
+section:nth-child(6) p{margin-top:650px; margin-left:360px;}
+
+section:nth-child(2) span{margin-top:50px; margin-left:185px; width:300px; text-align:right;}
+section:nth-child(3) span{margin-top:50px; margin-left:955px;}
+section:nth-child(4) span{margin-top:50px; margin-left:205px; width:300px; text-align:right;}
+section:nth-child(5) span{margin-top:50px; margin-left:905px;}
+section:nth-child(6) span{margin-top:50px; margin-left:215px; width:350px; text-align:right;}
+
+.title{position:absolute; left:33%; top:34%; transform:translate(-50% -50%); width:700px;}
+
+.p11{position:absolute; opacity:0.65; margin-left:2.5%; margin-top:2.5%;}
+.p21{position:absolute; margin-left:750px; top:10%}
+.p31{position:absolute; margin-left:600px; top:10%}
+.p41{position:absolute; margin-left:850px; top:15%}
+.p51{position:absolute; margin-left:550px; top:15%}
+.p61{position:absolute; margin-left:800px; top:10%}
+
+
+.icon1{position:absolute;left:61%; top:45%; animation:ani 2s infinite alternate linear; }
+.icon2{position:absolute;left:32%; top:88%; animation:ani1 1s infinite alternate linear;}
+.icon3{position:absolute;left:27%; top:88.5%; animation:ani2 1s infinite alternate;}
+@keyframes ani{
+    0%{}
+    100%{transform:scale(1.2);}
+}
+@keyframes ani1{
+    0%{}
+    30%{transform:translateY(-10px);}
+    50%{transform:translateY(0px);}
+}
+@keyframes ani2{
+    0%{}
+    10%{transform:translateX(-1px);}
+    20%{transform:translateX(0px);}
+    30%{transform:translateX(-1px);}
+    40%{transform:translateX(0px);}
+}

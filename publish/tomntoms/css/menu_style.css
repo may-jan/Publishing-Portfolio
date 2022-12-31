@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.group:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+#menu_container{width:1480px; height:370px; margin:0px auto; box-sizing:border-box; line-height:1; position:relative; top:115px;}
+
+#menu_container a {width:60px; height:30px; text-decoration: none; color:#581d00; text-align:center; line-height:30px;}
+
+#menu_container a.ig:hover {background:#581d00; color: #fff; border-radius: 20px; }
+
+.group li{width:350px; height:370px;}
+.group li img{width:350px; height:370px;}

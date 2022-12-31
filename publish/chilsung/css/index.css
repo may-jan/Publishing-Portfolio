@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+
+*{margin:0px; padding:0px;}
+body{width:100%; height:100%;}
+a{display:block; text-decoration:none; }
+ul, li{list-style:none;}
+
+/*---로그인, 회원가입---*/
+header{width:100%; height:40px; background-color:#149f5c; position:relative;}
+#headerwrap{width:1920px; height:40px; position:relative; margin:0 auto;}
+header #headerwrap ul{width:175px; height:40px; position:absolute; right:200px;}
+header #headerwrap ul li{float:left; line-height:40px; margin:0 15px;}
+header #headerwrap li a{font-weight:bold; color:white;}
+
+
+/*----네비게이션----*/
+nav{width:1920px; height:70px; position:relative; margin:0 auto;}
+#navwrap{width:1920px; height:70px; position:relative;}
+
+/*--로고--*/
+#navwrap .logo{background:url(../images/top/rogo.png)no-repeat center; width:360px; height:70px; position:absolute;}
+
+/*--메인메뉴--*/
+#navwrap>ul{width:1920px;height:70px; position:relative;}
+#navwrap>ul>li{float:left; width:200px; height:70px; position:relative; left:600px;  z-index:10;}
+#navwrap>ul>li>a{line-height:70px; text-align:center; font-size:18px; font-weight:bold; color:black;}
+#navwrap>ul>li:hover>a{color:red;}
+
+/*--빨간 밑줄 가상클래스--*/
+#navwrap>ul>li>a::after{content:""; width:200px; height:10px; background:red; position:absolute; left:0px; bottom:0px; opacity:0; transition:all .5s;}
+#navwrap>ul>li:hover a::after{opacity:1;}
+
+/*--서브메뉴--*/
+#navwrap>ul>li>.smenu{width:200px; height:0px; overflow:hidden; transition:all .5s;}
+#navwrap>ul>li>.smenu li{width:200px; height:70px;}
+#navwrap>ul>li>.smenu li a{text-align:center; line-height:70px; font-size:21px; font-weight:bold; color:black;}
+#navwrap>ul>li>.smenu li:hover>a{color:white; background:gray;}
+#navwrap>ul:hover .smenu{height:280px;}
+
+/*--뒷배경--*/
+#navwrap>ul>.navbox{width:100%; height:0px; background:white; top:70px; position:relative; z-index:1; transition:all .5s;}
+#navwrap>ul:hover >.navbox{height:280px;}
+
+/*----bx----*/
+#bxwrap{width:1920px; position:relative; margin:0 auto;}  
+
+/*----아이템 슬라이더----*/
+#item{width:1920px; height:600px; margin:0 auto; position:relative; background:url(../images/content/produce_bg.png)no-repeat; background-size:100%; margin-bottom:100px; background-position:0px -200px;}
+
+/*----롯데칠성은 지속가능한----*/
+#box1{width:1920px; height:400px; position:relative; margin:0 auto; background:url(../images/content/business_bg4.jpg); background-size:100%;}
+#box1 h3{width:400px; margin:0 auto; font-weight:bold; color:white; font-size:20px; position:relative; top:30px;}
+#box1 .imgbox{width:1080px; height:250px; position:relative; left:420px; top:70px; margin:0 auto;}
+#box1 div {width:250px; height:250px; float:left; margin:0 10px;}
+#box1 div a{width:250px; height:250px; background-size:cover; background-position:-100px;}
+
+.img1 a{background:url("../images/content/business_1.PNG");}
+.img2 a{background:url("../images/content/business_2.jpg");}
+.img3 a{background:url("../images/content/business_3.jpg");}
+.img4 a{background:url("../images/content/business_4.jpg");}
+
+.img1::before{content:"윤리경영"; width:250px; height:0px; text-align:center; line-height:50px; position:absolute; bottom:0px; background:rgba(80,80,80,0.8); transition:all .5s; overflow:hidden; color:white; font-weight:bold; }
+.img1:hover::before{height:50px;}
+
+.img2::before{content:"환경경영"; width:250px; height:0px; text-align:center; line-height:50px; position:absolute; bottom:0px; background:rgba(80,80,80,0.8); transition:all .5s;  overflow:hidden; color:white; font-weight:bold; }
+.img2:hover::before{height:50px;}
+
+.img3::before{content:"사회공헌"; width:250px; height:0px; text-align:center; line-height:50px; position:absolute; bottom:0px; background:rgba(80,80,80,0.8); transition:all .5s;  overflow:hidden; color:white; font-weight:bold; }
+.img3:hover::before{height:50px;}
+
+.img4::before{content:"공정거래"; width:250px; height:0px; text-align:center; line-height:50px; position:absolute; bottom:0px; background:rgba(80,80,80,0.8); transition:all .5s;  overflow:hidden; color:white; font-weight:bold; }
+.img4:hover::before{height:50px;}
+
+
+/*----이벤트, 신제품----*/
+#box2{width:1280px; height:450px; margin:0 auto; position:relative; top:10px;}
+#box2>div{width:620px; height:350px; position:absolute; box-sizing:border-box;}
+.box2-2{right:0px;}
+
+#box2>div h1{font-size:40px; text-align:center; margin:20px 0px;}
+#box2>div .more a{background:url(../images/content/more.jpg) no-repeat; width:50px; height:20px; position:absolute; top:35px; right:30px;  background-size:100%;}
+
+.box2-1 .event a{background:url(../images/content/event_1.jpg) no-repeat; width:620px; height:350px; background-size:cover;}
+.box2-2 .new a{background:url(../images/content/newprd_1.JPG) no-repeat; width:620px; height:350px; background-size:cover;}
+
+.border a::before{content:""; border:0px solid green; width:100%; height:100%;  position:absolute; transition:all .5s; box-sizing:border-box;}
+.border:hover a::before{border:20px solid green;}
+
+
+/*----롯데칠성뉴스----*/
+#box3{width:100%; height:600px; position:relative; top:60px;}
+#box3 #box3wrap{width:1600px; height:600px; margin:0 auto; border:solid #ddd 1px; box-shadow:2px 2px 10px 3px #ddd; position:relative;}
+
+#box3wrap .box3top{width:1500px; height:100px; position:relative; margin:0 auto; border-bottom:8px solid red; padding:15px 0px;}
+.box3top h1{font-size:40px; text-align:center;}
+.box3top .box3more a{background:url(../images/content/more.jpg) no-repeat; width:50px; height:20px; background-size:100%; position:absolute; bottom:5px; right:5px;}
+
+#box3wrap>.box3bottom{width:1500px; height:380px; margin:0 auto; position:relative; top:90px;}
+.box3bottom>li{width:270px; height:340px; float:left; margin:0px 15px; position:relative; top:0px;}
+.box3bottom>li>a{width:270px; height:270px; transition:all .5s;}
+.news1>a{background:url("../images/content/pnews_1.JPG"); background-size:cover; background-position:0px -15px;}
+.news2>a{background:url("../images/content/pnews_2.JPG"); background-size:cover;}
+.news3>a{background:url("../images/content/pnews_3.PNG"); background-size:cover;}
+.news4>a{background:url("../images/content/pnews_5.png"); background-size:cover;}
+.news5>a{background:url("../images/content/pnews_4.JPG"); background-size:cover;}
+.box3bottom>li>a:hover{transform:scale(1.1);}
+.box3bottom>li>p{position:absolute; left:0px; bottom:0px; font-weight:bold; font-size:18px; color:black; text-align:center;}
+
+
+/*----롯데칠성커뮤니티----*/
+#box4{width:100%; height:1110px; position:relative; top:100px;}
+#box4 #box4wrap{width:1600px; height:1110px; margin:0 auto; position:relative;}
+
+#box4wrap>h1{font-size:40px; text-align:center; position:relative;}
+#box4wrap .community{width:1500px; height:850px; margin:0 auto; position:relative; top:20px;}
+
+/*이미지 삽입, 이미지 위치잡기*/
+.comm1{background:url(../images/content/community_1.JPG); width:400px; height:400px; background-size:cover;}
+.comm2{background:url(../images/content/community_2.jpg); width:400px; height:400px; background-size:cover;}
+.comm3{background:url(../images/content/community_3.jpg); width:550px; height:550px; background-size:cover;}
+.comm4{background:url(../images/content/community_4.jpg); width:400px; height:400px; background-size:cover;}
+.comm5{background:url(../images/content/community_5.jpg); width:400px; height:400px; background-size:cover;}
+
+.community li{position:absolute; overflow:hidden;}
+.comm2{bottom:0px;}
+.comm3{left:470px; top:70px;}
+.comm4{right:0px;}
+.comm5{right:0px; bottom:0px;}
+
+/*오른쪽 위 아이콘*/
+.comm1 a::before{content:""; background:url(../images/content/icon.png); width:50px; height:50px; position:absolute; right:5px; background-position:-70px -125px;}
+.comm2 a::before{content:""; background:url(../images/content/icon.png); width:50px; height:50px; position:absolute; right:5px; background-position:-10px -125px;}
+.comm3 a::before{content:""; background:url(../images/content/icon.png); width:50px; height:50px; position:absolute; right:5px; background-position:-130px -125px;}
+.comm4 a::before{content:""; background:url(../images/content/icon.png); width:50px; height:50px; position:absolute; right:5px; background-position:-70px -125px;}
+
+/*호버시 더보기 가상클래스*/
+.community li a::after{content:"더보기"; width:150px; height:50px; color:white; border:1px solid white; text-align:center; line-height:50px; font-size:20px; position:absolute; left:32%; top:42%; opacity:0; transition:all .5s; }
+.community li:hover a::after{opacity:1;}
+
+/*호버시 불투명창 가상클래스*/
+.comm1::before{content:""; width:100%; height:100%; background:#888; position:absolute; opacity:0.8; top:-100%; transition:all .5s; }
+.comm1:hover::before{top:0px;}
+.comm2::before{content:""; width:100%; height:100%; background:#888; position:absolute; opacity:0.8; left:-100%; transition:all .5s; }
+.comm2:hover::before{left:0px;}
+.comm3::before{content:""; width:200%; height:200%; background:#888; position:absolute; opacity:0.8; left:-200%; transform:skewX(45deg); transition:all .5s; }
+.comm3:hover::before{left:0px;}
+.comm4::before{content:""; width:100%; height:100%; background:#888; position:absolute; opacity:0.8; bottom:-100%; transition:all .5s; }
+.comm4:hover::before{bottom:0px;}
+.comm5::before{content:""; width:100%; height:100%; background:#888; position:absolute; opacity:0.8; right:-100%; transition:all .5s; }
+.comm5:hover::before{right:0px;}
+
+/*더 많은 소식*/ 
+#box4wrap .box4bottom{width:1170px; height:100px; margin:0 auto; position:relative; top:100px;}
+.box4bottom h1{width:750px; font-size:35px; line-height:100px; position:absolute; left:0px;}
+.box4bottom .sns{width:400px; height:100px; position:absolute; right:0px;}
+.sns li{float:left; width:100px; height:100px; }
+.sns li a{width:100px; height:100px;}
+
+.sns .twitter a{background:url(../images/content/icon.png); background-size:1500%; background-position:0px -85px;}
+.sns .youtube a{background:url(../images/content/icon.png); background-size:1500%; background-position:-90px -85px;}
+.sns .insta a{background:url(../images/content/icon.png); background-size:1500%; background-position:-185px -85px;}
+.sns .facebook a{background:url(../images/content/icon.png); background-size:1500%; background-position:-270px -85px;}
+
+
+/*----footer1----*/
+#footer1{width:100%; height:130px; background:#777; position:relative; top:110px;}
+#footer1 #footer1wrap{width:1290px; height:130px;  margin:0 auto;}
+#footer1wrap>div{float:left; width:417px; height:130px; position:relative; margin:0px 6px;}
+
+.foot1-1 .footimg1{background:url(../images/foot/service1.png); width:100px; height:100px; background-size:cover; position:absolute; top:15px;}
+.foot1-1 .foottext1-1{position:absolute; left:110px; top:25px; font-size:24px; font-weight:bold;}
+.foot1-1 .foottext1-2{position:absolute; left:110px; top:60px; font-size:18px; font-weight:bold; color:white;}
+
+.foot1-2 .footimg2{background:url(../images/foot/service2.png); width:100px; height:100px; background-size:cover; position:absolute; top:15px;}
+.foot1-2 .foottext2-1{position:absolute; left:110px; top:25px; font-size:24px; font-weight:bold;}
+.foot1-2 .foottext2-2{position:absolute; left:110px; top:60px; font-size:18px; font-weight:bold; color:white;}
+
+.foot1-3 .footimg3{background:url(../images/foot/service3.png); width:100px; height:100px; background-size:cover; position:absolute; top:15px;}
+.foot1-3 .foottext3-1{position:absolute; left:110px; top:25px; font-size:24px; font-weight:bold;}
+.foot1-3 .foottext3-2{position:absolute; left:110px; top:60px; font-size:18px; font-weight:bold; color:white;}
+
+
+/*----footer2----*/
+#footer2{width:100%; height:180px; background:#333; position:relative; top:110px;}
+#footer2 #footer2wrap{width:1350px; height:220px; margin:0 auto; position:relative;}
+
+#footer2wrap .footerlogo{background:url(../images/foot/footter_rogo.png)no-repeat center center; width:200px; height:50px; background-size:cover; position:absolute; top:30px;}
+
+#footer2wrap .footer2-top{width:550px; height:20px; margin:0 auto; position:relative; top:20px;}
+.footer2-top li{float:left; width:auto; margin-right:40px;}
+.footer2-top li a{color:white; font-weight:bold; font-size:16px;}
+
+#footer2wrap .footer2-bottom{width:550px; height:90px; margin:0 auto; position:relative; top:70px;}
+#footer2wrap .footer2-bottom li{color:white; font-weight:bold; font-size:16px; position:absolute;}

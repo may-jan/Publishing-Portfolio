@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>mcdonalds</title>
+<!---어썸폰트--->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!--bx,아이템 슬라이더-->
+<link href="css/jquery.bxslider.css" rel="stylesheet" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script>
+    $(document).ready(function(){
+		$("#bxwrap").bxSlider({
+			mode: 'horizontal', //vertical
+			moveSlides: 2, //슬라이드 이동시 개수
+			slideMargin: 40, //슬라이드 사이의 여백
+			infiniteLoop: true, //반복
+			slideWidth: 1920, //슬라이드 너비
+            sliderHeight:820, //슬라이드 높이
+			minSlides: 1, //슬라이드 최소 노출 개수
+			maxSlides: 1, //슬라이드 최대 노출 개수
+			speed: 800, //슬라이드 전환속도
+            auto:true, //자동실행여부
+            pager:true, //동그라미 하단 버튼 노출 여부
+            autoHover:false, //호버시 애니메이션 정지 여부
+            countrols:false, //이전, 다음 화살표 버튼 노출여부
+	});
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/modernizr.custom.63321.js"></script>
+
+<!--------파비콘-------->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+
+<!--------스타일-------->
+<style>
+    *{margin:0px; padding:0px;}
+    ul, li{list-style:none;}
+    a{display:block; text-decoration:none;}
+    
+    
+/*----------header----------*/
+    header{width:100%; height:150px; background:white;}
+    #headerwrap{width:1920px; height:130px;  margin:0 auto; position:relative;}
+    /*--어썸폰트--*/
+    .ico{width:250px; height:35px; position:absolute; left:20px; top:15px;}
+    .ico li{float:left; padding:0 12px;}
+    .ico li a i{font-size:35px; color:#FFBA00; transition:all .3s;}
+    .ico li a i:hover{transform:scale(1.2); color:orangered;}
+    /*--로고--*/
+    .logo a{width:140px; height:100px; margin:0 auto; background:url(images/logo.png)no-repeat; position:relative; background-size:cover; top:20px;}
+    /*--로그인--*/
+    .right-top{width:160px;height:30px; position:absolute; right:35px; top:20px;}
+    .right-top li{float:left;}
+    .right-top li a{font-weight:bold; font-size:18px; color:#999; }
+    .right-top li:nth-child(1) a::after{content:"|";  margin:0 20px;}
+    
+    
+/*----------nav----------*/
+    #nav{width:100%; height:80px; background:#FFBA00; position:relative; top:0px; border-bottom:8px solid orange;}
+    #nav #navwrap{width:1920px; height:80px; margin:0 auto; position:relative; }
+    
+    /*--메인메뉴--*/
+    #nav #navwrap>ul{width:1005px; height:80px; margin:0 auto; position:relative; top:0px;}
+    #nav #navwrap>ul>li{float:left; width:250px; height:80px; text-align:center; }
+    #nav #navwrap>ul>li>a{color:white; font-size:22px; font-weight:bold; line-height:80px;}
+    
+    /*--서브메뉴--*/
+    #nav #navwrap>ul>li>.smenu{position:absolute; width:250px; height:0px; top:80px; overflow:hidden;  z-index:5; transition:all .5s;}
+    #nav #navwrap>ul>li>.smenu>li{width:250px; height:45px; line-height:45px;}
+    #nav #navwrap>ul>li>.smenu>li>a{font-size:16px;}
+    #nav #navwrap>ul:hover li>.smenu{height:315px;}
+    #nav #navwrap>ul li .smenu li:hover>a{color:white; background:orange; font-weight:bold; }
+    
+    /*--서브메뉴 뒷 박스--*/
+    .navbox{width:1000px; height:0px; background:white; position:absolute; top:80px; transition:all .3s; z-index:3; transition:all .5s; opacity:95%;}
+    #nav #navwrap>ul:hover .navbox{height:315px;}
+    
+    
+/*----------bx 슬라이더----------*/
+    #bx{width:1920px; height:600px; position:relative; z-index:1; margin:0 auto; top:0px;}
+    
+/*----------아이템 슬라이더----------*/
+    #item{height:600px; position:relative; width:1920px; margin:0 auto; top:100px;}
+    #item h1{width:250px; margin:0 auto; font-size:50px; position:relative; top:60px;}
+    
+    
+/*----------Section1----------*/
+    #section1{width:100%; height:800px; position:relative; top:250px;}
+    #section1 h1{width:430px; margin:0 auto; font-size:50px; position:relative; top:40px;}
+    
+    #section1 .promowrap{width:1800px; height:510px; margin:0 auto; position:relative; top:100px; border-radius:15px; background:#FFBA00;}
+    #section1 .promowrap li{width:446px; height:480px; float:left; padding:0 40px;}    
+    #section1 .promowrap li a{width:366px; height:300px;}
+    #section1 .promowrap li a img{transition:all .5s; border-radius:15px; border:10px solid white;}
+    #section1 .promowrap li a:hover>img{transform:scale(1.15); filter:blur(2px);}
+    
+    /*--가상클래스--*/
+    #section1 .promowrap li a::before{content:"더보기"; position:relative; top:170px; left:85px; color:white; font-size:35px; font-weight:bold; background:yellowgreen; z-index:5; opacity:0; transition:all .3s; padding:80px 50px; border-radius:100%;}
+    #section1 .promowrap li a:hover::before{opacity:1;}
+    
+    /*--텍스트--*/
+    #section1 .promowrap li p{text-align:center; font-size:28px; position:relative; top:100px; font-weight:bold;}
+    
+    
+/*----------영상 삽입----------*/
+    #video{width:1920px; height:870px; margin:0 auto; position:relative; left:0px; top:300px;}
+    #video h1{width:510px; height:100px; line-height:100px; margin:0 auto; font-size:50px; position:relative; top:0px;}
+    #video .videowrap video{width:1200px; height:100%; background-size:cover; position:relative; left:360px; top:20px;}
+    
+    
+/*----------Section2 Store----------*/
+    #section2{width:1920px; height:500px; margin:0 auto; position:relative; top:500px; }
+    #section2 .bgimg{background:url(images/store_bg.jpg)no-repeat; background-size:1920px 600px; opacity:0.35; width:1920px; height:500px; position:absolute;}
+    
+    #section2 h1{width:140px; height:130px; line-height:130px; margin:0 auto; font-size:50px; position:relative; top:0px;}
+    #section2 .section2wrap{width:1500px; height:350px; position:relative; margin:0 auto;}
+    #section2 .section2wrap li a{float:left; width:200px; height:200px; background-size:100%; position:absolute; border:12px solid #FFBA00; border-radius:40%;   
+    transition:all.4s;
+        animation-name:ani; animation-duration:.8s;
+        animation-timing-function:linear; animation-iteration-count:infinite;
+        animation-direction:alternate;}
+        @keyframes ani{
+        100%{transform:translateY(10px);}}
+    
+    #section2 .section2wrap li a:hover{color:white; transform:scale(1.1);}
+    
+   #section2 .section2wrap li a p{text-align:center; font-size:22px; position:relative; top:-20px; padding:5px 8px; background:#FFBA00; font-weight:bold;}
+    
+    .store1 a{background:url(images/store1.png)no-repeat center; left:100px; top:20px;}
+    .store2 a{background:url(images/store2.png)no-repeat center; left:350px; bottom:20px;}
+    .store3 a{background:url(images/store3.png)no-repeat center; left:650px; top:20px;}
+    .store4 a{background:url(images/store4.png)no-repeat center; right:350px; bottom:20px;}
+    .store5 a{background:url(images/store5.png)no-repeat center; right:100px; top:20px;}
+    
+    
+/*----------Footer----------*/
+    footer{width:100%; height:260px; position:relative; top:700px; background:#444;}
+    footer .footerwrap{width:1400px; height:300px; margin:0 auto;}
+    
+    footer .footerwrap .footertop{width:825px; height:20px; margin:0 auto; position:relative; line-height:20px; top:30px;}
+    footer .footerwrap .footertop li{float:left; margin:0 20px;}
+    footer .footerwrap .footertop li a{font-weight:bold; color:white; font-size:18px;}
+    footer .footerwrap .footertop li a:hover{color:#FFBA00;}
+    
+    footer .footerwrap .footerbottom{width:1400px; height:120px; position:relative; top:100px;}
+    footer .footerwrap .footerbottom p{height:22px; line-height:22px; color:#ddd; font-size:14px; text-align:center;}
+    
+    
+/*----------top btn----------*/
+    #topwrap{width:43px; height:26px; position:fixed; right:50px; bottom:50px;  z-index:10;}
+    #topwrap .top a{background:url(images/btn_top.png); width:43px; height:26px; position:fixed; z-index:10;}
+    
+</style> 
+</head>
+
+<body>
+<div id="topwrap">
+<div class="top">
+<a href="#"></a></div>
+</div>
+<header>
+<div id="headerwrap">
+<div class="ico"><!--어썸폰트-->
+    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+</div>
+<div class="logo"><a href="#"></a></div>
+<div class="right-top">
+    <li><a href="#">LOGIN</a></li>
+    <li><a href="#">JOIN</a></li>
+</div>
+</div>    
+</header>
+
+<nav id="nav">
+<div id="navwrap">
+<ul>
+<li><a href="#">Menu</a>
+<ul class="smenu">
+    <li><a href="#">버거</a></li>
+    <li><a href="#">맥런치</a></li>
+    <li><a href="#">맥모닝</a></li>
+    <li><a href="#">해피 스낵</a></li>
+    <li><a href="#">사이드 &amp; 디저트</a></li>
+    <li><a href="#">맥카페 &amp; 음료</a></li>
+    <li><a href="#">해피밀</a></li>
+</ul></li>
+
+<li><a href="#">Store</a>
+<ul class="smenu">
+    <li><a href="#">매장찾기</a></li>
+    <li><a href="#">맥딜리버리</a></li>
+    <li><a href="#">맥드라이브</a></li>
+    <li><a href="#">임차문의</a></li>
+</ul></li>
+
+<li><a href="#">What's New</a>
+<ul class="smenu">
+    <li><a href="#">프로모션</a></li>
+    <li><a href="#">새로운 소식</a></li>
+    <li><a href="#">이달의 해피밀</a></li>
+</ul></li>
+
+<li><a href="#">Story</a>
+<ul class="smenu">
+    <li><a href="#">브랜드 소개</a></li>
+    <li><a href="#">사회적 책임과 지원</a></li>
+    <li><a href="#">맥도날드 경쟁력</a></li>
+    <li><a href="#">맥도날드 사람들</a></li>
+</ul></li>
+<div class="navbox"></div> 
+</ul>
+</div>
+</nav>
+
+<section id="bx">
+<div id="bxwrap">
+   <div><img src="images/bx1.png"></div>
+   <div><img src="images/bx2.png"></div>
+   <div><img src="images/bx3.png"></div>
+   <div><img src="images/bx4.png"></div>
+   <div><img src="images/bx5.png"></div>
+</div>
+</section> 
+  
+<section id="item">
+<h1>Best Menu</h1>
+<div id="itemwrap">
+<div id="mi-slider" class="mi-slider">
+<ul class="burger">
+<li><a href="#"><img src="images/burger1.png" alt="#"><h4>슈니언버거</h4></a></li>
+<li><a href="#"><img src="images/burger2.png" alt="#"><h4>상하이버거</h4></a></li>
+<li><a href="#"><img src="images/burger3.png" alt="#"><h4>빅맥</h4></a></li>
+<li><a href="#"><img src="images/burger4.png" alt="#"><h4>1955버거</h4></a></li>
+</ul>
+
+<ul class="side">
+<li><a href="#"><img src="images/side1.png" alt="#"><h4>선데이<br>아이스크림</h4></a></li>
+<li><a href="#"><img src="images/side2.png" alt="#"><h4>딸기 오레오<br>맥플러리</h4></a></li>
+<li><a href="#"><img src="images/side3.png" alt="#"><h4>상하이 치킨<br>스낵랩</h4></a></li>
+</ul>
+
+<ul class="drink">
+<li><a href="#"><img src="images/drink1.png" alt="#"><h4>한라봉 칠러</h4></a></li>
+<li><a href="#"><img src="images/drink2.png" alt="#"><h4>자두 칠러</h4></a></li>
+<li><a href="#"><img src="images/drink3.png" alt="#"><h4>배 칠러</h4></a></li>
+<li><a href="#"><img src="images/drink4.png" alt="#"><h4>바닐라 쉐이크</h4></a></li>
+</ul>
+
+
+<nav>
+<a href="#">Burger</a>
+<a href="#">Side</a>
+<a href="#">Drink</a>
+</nav>
+</div>
+</div>
+</section>
+
+<section id="section1">
+<h1>Promotion &amp; Event</h1>
+<div class="promowrap">
+    <li><a href="#"><img src="images/promo1.png"></a><p>서머 콜라보레이션!<br>맥도날드XLCK 한정판 굿즈!</p></li>
+    <li><a href="#"><img src="images/promo2.png"></a><p>자두 칠러가 돌아왔다!</p></li>
+    <li><a href="#"><img src="images/promo3.png"></a><p>이 달의 해피밀!<br>톰과제리를 만나보세요</p></li>
+    <li><a href="#"><img src="images/promo4.png"></a><p>맥도날드 앱 출시!<br>쿠폰부터 정보까지!</p></li>       
+</div>   
+</section>
+
+<section id="video">
+<h1>MCdonalds YOUTUBE</h1>
+<div class="videowrap">
+<video loop="loop" controls autoplay muted>
+<source src="video/video.mp4">
+</video>
+</div>
+</section>
+
+<section id="section2">
+<div class="bgimg"></div>
+<h1>Store</h1>
+<div class="section2wrap">
+    <li class="store1"><a href="#"><p>24시간</p></a></li>
+    <li class="store2"><a href="#"><p>맥드라이브</p></a></li>
+    <li class="store3"><a href="#"><p>맥모닝</p></a></li>
+    <li class="store4"><a href="#"><p>맥드라이브</p></a></li>
+    <li class="store5"><a href="#"><p>디카페인 커피</p></a></li>
+</div>
+</section>
+
+<footer>
+<div class="footerwrap">
+<div class="footertop">
+    <li><a href="#">개인정보 처리방침</a></li>
+    <li><a href="#">위치정보 이용약관</a></li>
+    <li><a href="#">사이트맵</a></li>
+    <li><a href="#">임차문의</a></li>
+    <li><a href="#">고객문의</a></li>
+    <li><a href="#">인재채용</a></li>
+</div>
+<div class="footerbottom">
+    <p>한국맥도날드(유)</p>
+    <p>대표이사 : 앤토니 마티네즈</p>
+    <p>사업자등록번호 : 101-81-26409</p>
+    <p>전화주문 : 1600-5252</p>
+    <p>COPYRIGHT © 2019 ALL RIGHTS RESERVED BY McDonald's.</p>
+</div>
+</div>   
+</footer>
+
+<!--------아이템슬라이더-------->
+<script src="js/jquery.catslider.js"></script>
+<script>
+$(function() {
+$( '#mi-slider' ).catslider();
+});
+</script>
+</body>
+</html>

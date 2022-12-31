@@ -1,0 +1,92 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+ul{list-style:none;}
+a{text-decoration:0;}
+
+img{border:none;}
+
+#wrap{position:fixed; top:0; left:0; width:100%; height:100%; min-width:1400px; min-height:780px; transition:all 2s;}
+
+#wrap .logo{width:260px; height:200px; position:fixed; top:30px; left:40px;}
+.logo>img{width:100%;}
+
+.list{position:fixed; top:37px; right:220px;}
+.list li{float:left; margin-left:28px;}
+.list li a{font-size:28px; font-weight:bold; color:white; font-family: 'Nanum Pen Script', cursive; font-weight:100; transition:all .5s;}
+
+.sns{position:fixed; top:35px; right:50px;}
+.sns li{float:left; margin-left:23px; font-size:25px; font-weight:bold; }
+.sns li a{color:white;}
+.sns li a i{transition:all .5s;}
+.sns li a:hover i{transform:scale(1.2);}
+
+article p{position:absolute; top:350px; left:250px; width:500px; font-size:80px; color:#fff; font-family: 'Shrikhand', cursive; transition:all .5s;}
+article b{position:absolute; top:450px; left:250px; width:500px; font-size:40px; color:#fff; font-family: 'Nanum Pen Script', cursive; font-weight:100; transition:all .5s;}
+ 
+figure{position:absolute; top:300px; right:80px; width:600px; height:600px; overflow:hidden; transition:all 2s; z-index:5; transform:rotate(5deg);}
+figure>img{position:relative; top:0px; left:0; z-index:5; width:600px; height:600px;}
+
+figure p{position:absolute; left:100px; top:70px; width:390px; height:320px; overflow:hidden; font-size:45px; font-weight:bold; line-height:4.6; box-sizing:border-box; z-index:2; transition:all .5s;}
+
+figure p span{position:relative; top:60px; left:73px; z-index:3; color:#fff; text-shadow:2px 2px 2px #7f7f7f;}
+figure p b{position:relative; top:60px; left:73px; z-index:3; color:#fff;}
+
+nav{position:fixed; bottom:70px; left:6%; width:88%; z-index:99;}
+nav li{float:left; width:25%;}
+nav li a{display:block; width:98%; height:35px; background:#fff; color:#111; margin:0 auto; transition:all .5s;  font-size:13px;  line-height:35px; letter-spacing:10px; box-sizing:border-box; padding-left:30px; opacity:0.6; z-index:1; position:relative; font-weight:bold; }
+
+nav li:hover a{background:#e30613; color:white; opacity:0.9;}
+nav li a.on{background:#111; color:#eee; opacity:0.9;}/*임의클래스*/
+
+#wrap>img{position:absolute; top:15px; right:-100px; opacity:0.8; width:200px; height:auto; animation:ani1 30s linear infinite;}
+
+figure p img.c1{width:130px; height:auto; position:absolute; top:0px; right:0px; z-index:3; animation:ani3 15s linear infinite;}
+
+@keyframes ani1{
+    0%{right:-200px; top:50px;}
+    100%{right:2000px; top:-120px;}
+}
+@keyframes ani3{
+    0%{right:-130px;}
+    100%{right:390px; top:0px;}
+}
+
+
+/*--임의 클래스 만들어주기--*/
+#wrap.spring{background:url("../images/spring.jpg")100%/cover;}
+#wrap.spring .list a{color:#FFE16F;}
+#wrap.spring .sns i{color:#FFE16F;}
+#wrap.spring figure p{background:url(../images/m_spring.jpg)center/cover; z-index:2; color:#ccc;}
+#wrap.spring article p{color:#f9d52b; text-shadow:3px 3px 3px #222;}
+#wrap.spring article b{color:#fff;}
+#wrap.spring>img:nth-child(1){opacity:1;}
+#wrap.spring>img:nth-child(2){opacity:1;}
+
+
+#wrap.summer{background:url(../images/summer.jpg)center/cover;}
+#wrap.summer .list a{color:#fff;}
+#wrap.summer .sns i{color:#fff;}
+#wrap.summer figure p{background:url(../images/m_summer.jpg)center/cover; z-index:2; color:#aaa;}
+#wrap.summer article p{color:#72d0de; text-shadow:3px 3px 3px #111;}
+#wrap.summer article b{color:#c2ecf1;}
+#wrap.summer>img:nth-child(1){opacity:1;}
+#wrap.summer>img:nth-child(2){opacity:1;}
+
+#wrap.fall{background:url(../images/fall2.jpg)center/cover;}
+#wrap.fall .list a{color:#fcb4a7;}
+#wrap.fall .sns i{color:#fcb4a7;}
+#wrap.fall figure p{background:url(../images/m_fall.jpg)center/cover; z-index:2; color:#666;}
+#wrap.fall article p{color:#fa7e66; text-shadow:3px 3px 3px #000;}
+#wrap.fall article b{color:#fa7e66;}
+#wrap.fall>img:nth-child(1){opacity:1;}
+#wrap.fall>img:nth-child(2){opacity:1;}
+
+#wrap.winter{background:url(../images/winter.jpg)center/cover;}
+#wrap.winter .list a{color:#686868;}
+#wrap.winter .sns i{color:#686868;}
+#wrap.winter figure p{background:url(../images/m_winter.jpg)center/cover; z-index:2; color:#ddd;}
+#wrap.winter article p{color:#fff; text-shadow:3px 3px 3px #000;}
+#wrap.winter article b{color:#000;}
+#wrap.winter>img:nth-child(1){opacity:1;}
+#wrap.winter>img:nth-child(2){opacity:1;}
+

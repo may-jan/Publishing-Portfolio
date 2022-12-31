@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+*{margin:0px; padding:0px;}
+body{width:100%; height:100%;}
+ul, li{list-style:none;}
+a{display:block; text-decoration:none; color:black;}
+
+/*--section1--*/
+#section1{width:13%; height:100%; background:#fcf9ee; position:relative; float:left; transition:all .5s;}
+
+.brand a{background:url("../images/brand.png")no-repeat; width:100%; height:100px; position:relative; top:20px; background-size:contain;}
+
+.menu{width:100%; height:100%; position:absolute; top:250px;}
+.menu li a{width:100%; height:40px; line-height:40px; font-size:18px; margin:15px 0px; transition:all .3s; box-sizing: border-box; padding-left:13px;}
+.menu li:hover>a{color:orangered;}
+
+/*--section2--*/
+#section2{float:left; width:87%; height:40px; background:#555; position:relative; transition:all .5s;}
+#section2 .liwrap{height:40px; left:80%; position:absolute;}
+#section2 li{float:left; padding:0px 10px; line-height:40px;}
+#section2 li a{color:white; font-size:11px;}
+#section2 li a:hover{color:orange;}
+
+
+/*--section3--*/
+#section3{float:left; box-sizing:border-box; width:87%; height:100%; position:relative; transition:all .5s;}
+#section3 li{float:left; box-sizing:border-box; position:relative; overflow:hidden;}
+.box1{width:60%; height:600px; margin:0%;}
+.box2{width:40%; height:300px; margin:0%;}
+.box3{width:20%; height:300px; margin:0%;}
+.box4{width:20%; height:300px; margin:0%;}
+.box5{width:25%; height:300px; margin:0%;}
+.box6{width:35%; height:300px; margin:0%;}
+.box7{width:20%; height:300px; margin:0%;}
+.box8{width:20%; height:300px; margin:0%;}
+.box9{width:60%; height:300px; margin:0%;}
+.box10{width:20%; height:300px; margin:0%;}
+.box11{width:20%; height:300px; margin:0%;}
+
+.box1 a{width:100%; height:600px; background:url("../images/img3.jpg"); background-size:cover;}
+.box2 a{width:100%; height:300px; background:url("../images/img32.jpg"); background-size:cover;}
+.box3{height:300px; background:#fcf9ee; text-align:right;}
+.box4 a{width:100%; height:300px; background:url("../images/img28.jpg"); background-size:cover;}
+.box5 a{width:100%; height:300px; background:url("../images/img7.jpg"); background-size:cover;}
+.box6{height:300px; background:#fcf9ee;}
+.box7 a{width:100%; height:300px; background:url("../images/img9.jpg"); background-size:cover;}
+.box8{height:300px; background:#fcf9ee;}
+.box9{height:300px; background:url("../images/img36.jpg"); background:contain;}
+.box9 a{font-weight:bold; color:white; font-size:30px; text-align:center; line-height:300px; transition:all .5s;}
+.box10{height:300px; background:#fcf9ee; text-align:right;}
+.box11 a{width:100%; height:300px; background:url("../images/img29.jpg"); background:cover;}
+
+.maintext{color:#333; font-size:23px; font-weight:bold;  transition:all .5s;}
+.subtext{color:#333; font-size:15px; line-height:30px; position:relative; top:20px; transition:all .5s;}
+.box3, .box6, .box8, .box10{padding:10px; transition:all .5s;}
+
+/*애니메이션 효과*/
+.box1 a span{color:white; font-size:8vmax; font-weight:bold; position:absolute; bottom:20px; right:30px;
+animation-name:ani;
+animation-duration:1.5s;
+animation-direction:alternate;
+animation-timing-function:linear;
+animation-iteration-count:infinite;}
+@keyframes ani{
+	0%{}
+	100%{transform:rotateY(180deg);}
+}
+
+
+/*hover효과*/
+.box3:hover, .box6:hover,.box8:hover,.box10:hover{background:#ffeaa3; transition:all .5s;}
+.box3:hover span, .box6:hover span,.box8:hover span,.box10:hover span{color:#486310;}
+.box9:hover>a{font-size:31px; color:orangered;}
+
+/*가상클래스효과*/    
+.box4 a::after{content:"페어 앤 프리지아 코롱"; position:absolute; font-size:22px; font-weight:bold; width:100%; height:250px; margin:0px 15px; transition:all .5s; color:white; top:-40px;}
+.box5 a::after{content:"신제 타운하우스 컬렉션"; position:absolute; font-size:22px; font-weight:bold; width:335px; height:335px; margin:0px 15px; transition:all .5s; color:white; top:-40px;}
+.box7 a::after{content:"라임바질 앤 만다린샴푸"; position:absolute; font-size:22px; font-weight:bold; width:335px; height:335px; margin:0px 15px; transition:all .5s; color:white; top:-40px;}
+.box11 a::after{content:"선물하기"; position:absolute; font-size:22px; font-weight:bold; width:335px; height:205px; margin:0px 15px; transition:all .5s; color:white; top:-40px;}
+.box4 a:hover::after, .box5 a:hover::after, .box7 a:hover::after, .box11 a:hover::after{top:10px;}
+
+.box2 a::before{content:""; width:200%; height:100%; background:white; position:absolute; opacity:0.5; transform:skewX(45deg); left:-250%; transition:all .4s;}
+.box2:hover>a::before{left:-50%;}
+.box2 a::after{content:"더보기 →"; color:white; font-size:20px; border:1px solid white; padding:15px 40px; position:absolute; top:40%; left:33%; opacity:0; transition:all .4s;}
+.box2:hover>a::after{opacity:1;}
+
+
+
+/*--미디어쿼리--*/
+@media screen and (min-width:1281px) and (max-width:1600px) {
+	#section1{position:relative; width:100%; height:120px;}
+	.brand{position:relative; top:-10px;}
+	.menu{top:35px; left:65%;}
+	.menu li{float:left;}
+	#section2{width:100%;}
+	#section3{width:100%;}
+}
+
+@media screen and (min-width:1024px) and (max-width:1280px) {
+	#section1{position:relative; width:100%; height:120px;}
+	.brand{position:relative; top:-10px;}
+	.menu{top:35px; left:55%;}
+	.menu li{float:left;}
+	#section2{width:100%;}
+	#section2 .liwrap{left:75%;}
+	#section3{width:100%;}
+	.box1{width:70%;}
+	.box2{width:30%;}
+	.box3{width:30%;}
+	.box4{width:25%;}
+	.box5{width:25%;}
+	.box6{width:50%;}
+	.box7{width:20%;}
+	.box8{width:30%;}
+	.box9{width:50%;}
+	.box10{width:50%}
+	.box11{width:50%}
+}
+
+@media screen and (min-width:731px) and (max-width:1023px){
+	#section1{position:relative; width:100%; height:120px;}
+	.brand{position:relative; top:-10px;}
+	.menu{top:35px; left:50%;}
+	.menu li{float:left;}
+	#section2{width:100%;}
+	#section2 .liwrap{left:65%;}
+	#section3{width:100%;}
+	.box1{width:100%;}
+	.box2{width:65%;}
+	.box3{width:35%;}
+	.box4{width:35%;}
+	.box5{width:65%;}
+	.box6{width:50%;}
+	.box7{width:50%;}
+	.box8{width:30%;}
+	.box9{width:70%;}
+	.box10{width:60%;}
+	.box11{width:40%;}
+}
+
+@media screen and (min-width:641px) and (max-width:730px){
+	#section1{position:relative; width:100%; height:120px;}
+	.brand{position:relative; top:-10px; left:-10px;}
+	.menu{top:35px; left:39%;}
+	.menu li{float:left;}
+	#section2{width:100%;}
+	#section2 .liwrap{left:55%;}
+	#section3{width:100%;}
+	.box1{width:100%;}
+	.box2{width:100%;}
+	.box3{width:50%;}
+	.box4{width:50%;}
+	.box5{width:50%;}
+	.box6{width:50%;}
+	.box7{width:50%;}
+	.box8{width:50%;}
+	.box9{width:100%;}
+	.box10{width:50%;}
+	.box11{width:50%;}
+}
+
+@media screen and (min-width:501px) and (max-width:640px){
+	#section1{position:relative; width:100%; height:170px;}
+	.brand{position:relative; top:-20px; left:25%;}
+	.menu{top:100px; left:15%;}
+	.menu li{float:left;}
+	#section2{display:none;}
+	#section3{width:100%;}
+	.box1{width:100%;}
+	.box2{width:100%;}
+	.box3{width:50%;}
+	.box4{width:50%;}
+	.box5{width:50%;}
+	.box6{width:50%;}
+	.box7{width:50%;}
+	.box8{width:50%;}
+	.box9{width:100%;}
+	.box10{width:50%;}
+	.box11{width:50%;}
+}
+
+@media screen and (max-width:500px){
+	#section1{position:relative; width:100%; height:120px;z-index:10;}
+	.brand{position:relative; top:-20px; left:20%;}
+	.menu{width:240px; top:200px; left:27%;}
+	.menu li a{width:100%; height:50px; line-height:50px; border-radius:12px; margin:20px 0px; text-align:center; background:white; opacity:50%; color:black;}
+	.menu li a:hover{opacity:1; transform:scale(105%);}
+	.box1 a{width:100%; height:100%;}
+	
+	#section2{display:none;}
+	#section3{width:100%; margin-left:0px; z-index:9;}
+	#section3 li{display:none;}
+	#section3 .box1{display:block; width:100%; height:100%; position:fixed;}
+	.box1 a .ani{display:none;}
+	}
